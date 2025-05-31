@@ -217,6 +217,3 @@
     </script>
 </body>
 </html>
-<div style="position: fixed; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px;">
-  制作者：钟
-</div>
