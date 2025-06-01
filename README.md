@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王鈊贻 - 天天来财</title>
+    <title>吴子翀 - 天天来财</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap');
         
@@ -133,7 +133,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>王鈊贻 天天来财</h1>
+        <h1>吴子翀 天天来财</h1>
         
         <div class="money-icon">💰</div>
         
