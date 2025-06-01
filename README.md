@@ -1,247 +1,162 @@
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - 天天来财</title>
+    <title>喵喵乐园 - 点击就有猫咪表情</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap');
         
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Serif SC', serif;
-            color: #ffde59;
-            overflow: hidden;
-            background: #e53935;
-            height: 100vh;
-            position: relative;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
+            font-family: 'Mali', cursive, sans-serif;
             text-align: center;
+            background-color: #ffebf3;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="%23ff9ec6" opacity="0.4"/><circle cx="50" cy="30" r="4" fill="%23ff9ec6" opacity="0.4"/><circle cx="80" cy="20" r="3" fill="%23ff9ec6" opacity="0.4"/><circle cx="30" cy="60" r="5" fill="%23ff9ec6" opacity="0.4"/><circle cx="70" cy="70" r="4" fill="%23ff9ec6" opacity="0.4"/></svg>');
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐾</text></svg>"), auto;
+            overflow: hidden;
             position: relative;
-            z-index: 1;
-            background-color: transparent;
-            margin-top: 50px;
         }
         
         h1 {
-            font-family: 'Ma Shan Zheng', cursive;
-            font-size: 4rem;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 0px rgba(0,0,0,0.3);
-            color: #ffde59;
+            color: #ff6b9e;
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 0px rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
         }
         
-        .blessing {
-            font-size: 1.5rem;
-            line-height: 2;
-            margin: 30px 0;
-            padding: 30px;
-            border-radius: 15px;
-            color: #ffde59;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .gold-text {
-            color: #d4af37;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        .red-packet {
-            position: absolute;
-            width: 80px;
-            height: 100px;
-            background: #e53935;
-            color: #ffde59;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 0;
-            user-select: none;
-            cursor: pointer;
-            transform: rotate(15deg);
-            font-family: 'Ma Shan Zheng', cursive;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid #ffde59;
-            animation: fall linear forwards;
-        }
-        
-        .red-packet:before {
+        h1:after {
             content: "";
             position: absolute;
-            top: 0;
+            bottom: -5px;
             left: 0;
-            right: 0;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 5px 5px 0 0;
-        }
-        
-        .red-packet:after {
-            content: "财";
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            font-size: 1.5rem;
-            color: #ffde59;
-        }
-        
-        @keyframes fall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-        
-        .money-icon {
-            font-size: 3rem;
-            margin: 20px;
-            animation: bounce 2s infinite;
-            text-shadow: 0 0 10px rgba(255,222,89,0.7);
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .wish {
-            font-size: 2rem;
-            margin-top: 40px;
-            font-weight: bold;
-            color: #ffde59;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .gold-coins {
-            position: fixed;
-            bottom: 0;
             width: 100%;
-            height: 100px;
-            background: linear-gradient(to top, rgba(212, 175, 55, 0.8), transparent);
-            z-index: 0;
+            height: 15px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0,5 Q5,0 10,5 T20,5" fill="none" stroke="%23ff9ec6" stroke-width="2"/></svg>') repeat-x;
+            background-size: 20px 10px;
+        }
+        
+        .instructions {
+            margin-top: 20px;
+            color: #ff85b2;
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(255, 105, 158, 0.2);
+        }
+        
+        .cat-emoji {
+            font-size: 70px;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            user-select: none;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        
+        .cloud {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            filter: blur(5px);
+            z-index: -1;
+        }
+        
+        .paw {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0.3;
+            animation: fade 4s linear infinite;
+        }
+        
+        @keyframes fade {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.4; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>吴子翀 天天来财</h1>
-        
-        <div class="money-icon">💰</div>
-        
-        <div class="blessing">
-            <p><span class="gold-text">芸</span>窗瑞气盈门庭，</p>
-            <p><span class="gold-text">熙</span>熙攘攘聚宝盆。</p>
-            <p>日进斗金如潮水，</p>
-            <p>年年有余福满门。</p>
-            <p>生意兴隆通四海，</p>
-            <p>财源茂盛达三江。</p>
-        </div>
-        
-        <div class="wish">
-            <p>愿您天天来财，时时进宝！</p>
-            <p>财源滚滚，富贵吉祥！</p>
-        </div>
-    </div>
-    
-    <div class="gold-coins"></div>
+    <h1>喵喵乐园 🎀</h1>
+    <p class="instructions">点击屏幕任何地方都会出现可爱的猫咪表情哦～</p>
     
     <script>
-        // 创建红包雨
-        function createRedPacket() {
-            const packet = document.createElement('div');
-            packet.className = 'red-packet';
+        const catEmojis = ['😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾'];
+        
+        // 创建背景云朵
+        for (let i = 0; i < 10; i++) {
+            const cloud = document.createElement('div');
+            cloud.className = 'cloud';
+            const size = Math.random() * 100 + 50;
+            cloud.style.width = `${size}px`;
+            cloud.style.height = `${size}px`;
+            cloud.style.left = `${Math.random() * 100}%`;
+            cloud.style.top = `${Math.random() * 100}%`;
+            document.body.appendChild(cloud);
+        }
+        
+        // 创建背景小爪印
+        for (let i = 0; i < 30; i++) {
+            const paw = document.createElement('div');
+            paw.className = 'paw';
+            paw.textContent = '🐾';
+            paw.style.left = `${Math.random() * 100}%`;
+            paw.style.top = `${Math.random() * 100}%`;
+            paw.style.fontSize = `${Math.random() * 15 + 10}px`;
+            paw.style.animationDelay = `${Math.random() * 4}s`;
+            document.body.appendChild(paw);
+        }
+        
+        document.addEventListener('click', function(e) {
+            const emoji = document.createElement('div');
+            emoji.className = 'cat-emoji';
+            emoji.textContent = catEmojis[Math.floor(Math.random() * catEmojis.length)];
             
-            // 随机选择祝福语
-            const blessings = ["天天来财", "招财进宝", "财源广进", "日进斗金", "生意兴隆", "财运亨通"];
-            const randomBlessing = blessings[Math.floor(Math.random() * blessings.length)];
-            packet.textContent = randomBlessing;
+            // 设置表情位置为点击位置
+            emoji.style.left = (e.clientX - 35) + 'px';
+            emoji.style.top = (e.clientY - 35) + 'px';
             
-            // 随机位置
-            packet.style.left = `${Math.random() * 100}vw`;
-            packet.style.top = `-100px`;
+            // 随机旋转角度
+            emoji.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
             
-            // 随机动画持续时间
-            const duration = Math.random() * 5 + 3;
-            packet.style.animationDuration = `${duration}s`;
+            document.body.appendChild(emoji);
             
-            // 随机旋转
-            const rotation = (Math.random() * 60) - 30;
-            packet.style.transform = `rotate(${rotation}deg)`;
+            // 播放喵喵声
+            playMeow();
             
-            document.body.appendChild(packet);
-            
-            // 点击红包效果
-            packet.addEventListener('click', function() {
-                this.style.animation = 'none';
-                this.style.transform = 'scale(1.5) rotate(0deg)';
-                this.style.transition = 'all 0.5s';
-                this.style.opacity = '0';
-                
-                // 创建金币飞溅效果
-                for (let i = 0; i < 5; i++) {
-                    const coin = document.createElement('div');
-                    coin.textContent = '💰';
-                    coin.style.position = 'absolute';
-                    coin.style.left = this.offsetLeft + 'px';
-                    coin.style.top = this.offsetTop + 'px';
-                    coin.style.fontSize = '2rem';
-                    coin.style.zIndex = '100';
-                    coin.style.animation = `coinFly${i} 1s forwards`;
-                    
-                    document.body.appendChild(coin);
-                    
-                    // 添加动画
-                    const style = document.createElement('style');
-                    style.textContent = `
-                        @keyframes coinFly${i} {
-                            0% { transform: translate(0, 0) scale(1); opacity: 1; }
-                            100% { transform: translate(${(Math.random() - 0.5) * 200}px, ${-Math.random() * 100 - 50}px) scale(0); opacity: 0; }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                    
-                    // 移除金币
-                    setTimeout(() => {
-                        coin.remove();
-                        style.remove();
-                    }, 1000);
-                }
-                
-                setTimeout(() => {
-                    this.remove();
-                }, 500);
-            });
-            
-            // 红包落地后移除
+            // 3-6秒后移除表情
             setTimeout(() => {
-                packet.remove();
-            }, duration * 1000);
+                emoji.style.transition = 'all 0.5s';
+                emoji.style.opacity = '0';
+                emoji.style.transform = `${emoji.style.transform} scale(0.5)`;
+                setTimeout(() => {
+                    emoji.remove();
+                }, 500);
+            }, Math.random() * 3000 + 3000);
+        });
+        
+        function playMeow() {
+            const meows = [
+                'https://assets.mixkit.co/sfx/preview/mixkit-cat-meow-117.mp3',
+                'https://assets.mixkit.co/sfx/preview/mixkit-cat-purring-148.mp3',
+                'https://assets.mixkit.co/sfx/preview/mixkit-cat-meow-119.mp3'
+            ];
+            const audio = new Audio(meows[Math.floor(Math.random() * meows.length)]);
+            audio.volume = 0.3;
+            audio.play().catch(e => console.log('自动播放被阻止，请点击页面后重试'));
         }
-        
-        // 持续生成红包
-        setInterval(createRedPacket, 300);
-        
-        // 初始生成一批红包
-        for (let i = 0; i < 20; i++) {
-            setTimeout(createRedPacket, i * 150);
-        }
-        
-        // 背景金币闪烁
-        setInterval(() => {
-            const goldTexts = document.querySelectorAll('.gold-text');
-            goldTexts.forEach(text => {
-                text.style.color = `hsl(${Math.random() * 20 + 40}, 100%, 60%)`;
-            });
-        }, 1000);
     </script>
 </body>
 </html>
